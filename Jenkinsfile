@@ -6,7 +6,7 @@ pipeline {
                 sh 'echo "Hello world"'
 				sh '''
 					echo "Multiline sh works too"
-					sh node --version
+					sh 'node --version'
 				'''
             }
         }
