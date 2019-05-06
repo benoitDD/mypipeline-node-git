@@ -13,7 +13,7 @@ pipeline {
 		stage('deploy') {
 			steps {
 				retry(3) {
-					sh './none-file.fake'
+					sh 'echo "Work forever"'
 				}
 			}
 		}
