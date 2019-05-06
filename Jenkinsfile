@@ -17,5 +17,12 @@ pipeline {
 				}
 			}
 		}
+		stage('some times'){
+			steps {
+				timeout(time: 1, unit: 'MINUTES') {
+					sh './health-check.sh'
+				}
+			}
+		}
     }
 }
