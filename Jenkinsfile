@@ -1,6 +1,15 @@
 pipeline {
     agent { docker { image 'node:6.3' } }
+	environment{
+		VAR_1 = 'my_var_1'
+		VAR_2 = 'my_var_2'
+	}
     stages {
+		stage('print var'){
+			steps{
+				sh 'printenv'
+			}
+		}
         stage('build') {
             steps {
                 sh 'echo "Hello world"'
