@@ -3,7 +3,11 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'npm help'
+                sh 'echo "Hello world"'
+				sh '''
+					echo "Multiline sh works too"
+					sh ls
+				'''
             }
         }
     }
